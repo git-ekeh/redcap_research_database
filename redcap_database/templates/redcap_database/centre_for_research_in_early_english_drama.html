@@ -1,0 +1,9 @@
+{% extends 'redcap_database/base.html' %}
+{% load static %}
+{% block content %}
+    <h2>The Centre for Research in Early English Drama</h2>
+    <form method="POST" class="centre_for_research_in_early_english_drama-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

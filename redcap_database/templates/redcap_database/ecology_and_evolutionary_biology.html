@@ -1,0 +1,9 @@
+{% extends 'redcap_database/base.html' %}
+{% load static %}
+{% block content %}
+    <h2>The Department of Ecology & Evolutionary Biology</h2>
+    <form method="POST" class="ecology_and_evolutionary_biology-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'redcap_database/base.html' %}
+{% load static %}
+{% block content %}
+    <h2>The Department of Material Culture</h2>
+    <form method="POST" class="material_culture-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

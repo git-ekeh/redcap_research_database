@@ -1,0 +1,9 @@
+{% extends 'redcap_database/base.html' %}
+{% load static %}
+{% block content %}
+    <h2>The Department of Near & Middle Eastern Civilizations</h2>
+    <form method="POST" class="near_and_middle_eastern_civilizations-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

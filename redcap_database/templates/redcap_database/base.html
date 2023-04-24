@@ -1,0 +1,54 @@
+<!-- templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>REDCap Signup Prototype</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/redmond/jquery-ui.css" rel="Stylesheet" />
+        <script language="javascript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+          $(function(){
+            $("#id_date").datepicker();
+          });
+        </script>
+        <script type="text/javascript">
+          $(function(){
+            $("#id_project_begin").datepicker();
+          });
+        </script>
+        <script type="text/javascript">
+          $(function(){
+            $("#id_project_end").datepicker();
+          });
+        </script>
+
+        {{form.media}}
+
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="container">
+                <a href="{% url 'Applied_Science_Engineering' %}" class="top-menu">
+                </a>
+                <h1><a href="/">REDCap Signup </a></h1>
+            </div>
+        </header>
+        <main class="content container">
+            <div class="row">
+                <div class="col">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

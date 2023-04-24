@@ -1,0 +1,9 @@
+{% extends 'redcap_database/base.html' %}
+{% load static %}
+{% block content %}
+    <h2>The Insitute for the History & Philosophy of Science & Technology</h2>
+    <form method="POST" class="institute_for_the_history_and_philosophy_of_science_and_technology-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

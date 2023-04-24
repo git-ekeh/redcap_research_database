@@ -1,0 +1,9 @@
+{% extends 'redcap_database/base.html' %}
+{% load static %}
+{% block content %}
+    <h2>D'Etude de la Frances et du Monde Francophone</h2>
+    <form method="POST" class="d_etude_de_la_frances_et_du_monde_francophone-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
