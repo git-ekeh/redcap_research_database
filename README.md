@@ -1,2 +1,3 @@
 # redcap_research_database
-developed a redcap research database for the university of Toronto while working a Systems Analyst...
+View master branch for code
+developed a redcap research database using Django and postgres DB, with an email backend as well. This was done independently, while working as a systems analyst at the university of Toronto 
